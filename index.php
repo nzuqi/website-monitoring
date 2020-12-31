@@ -1,9 +1,9 @@
 <?php
-    require './vendor/autoload.php';
 
+    date_default_timezone_set("Africa/Nairobi");
+    require './vendor/autoload.php';
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
     $dotenv->load();
-
     include('monitor.php');
     include('email.php');
 

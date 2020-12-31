@@ -5,7 +5,8 @@
         public $url = "";
         public $agent = "Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)";
 
-        //returns true, if domain is availible, false if not
+        // returns true, if domain is availible, false if not
+        // Reference: https://css-tricks.com/snippets/php/check-if-website-is-available/
         public function isDomainAvailible(){
             //initialize curl
             $ch = curl_init();
