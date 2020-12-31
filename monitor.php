@@ -20,7 +20,7 @@
             // curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
             //get answer
             $page = curl_exec($ch);
-            echo curl_error($ch);
+            // echo curl_error($ch);
             $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
             curl_close($ch);
             if($httpcode >= 200 && $httpcode < 400) return true;
