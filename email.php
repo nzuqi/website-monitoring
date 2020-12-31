@@ -2,7 +2,7 @@
 	
 	class Email{
 		
-        public $SENDGRID_API_KEY = "";
+        public $sendgrid_api_key = "";
 		public $send_from = "noreply@martin.co.ke";
 		public $send_from_name = "Martin Nzuki";
 		public $unsubscribe_url = 'https://martin.co.ke/mailing/unsubscribe'; // Link to unsubscribe required in emails. Read more: https://support.google.com/mail/answer/81126?hl=en
@@ -20,7 +20,7 @@
 			$msg = $this->message;
 			$msg = $this->parse_html_mail();
 			$email->addContent("text/html", $msg);
-            $sendgrid = new \SendGrid($this->SENDGRID_API_KEY);
+            $sendgrid = new \SendGrid($this->sendgrid_api_key);
             try {
                 $response = $sendgrid->send($email);
                 // print $response->statusCode() . "\n";
